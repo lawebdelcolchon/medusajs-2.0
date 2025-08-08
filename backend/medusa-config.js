@@ -1,3 +1,4 @@
+const port = process.env.PORT || 9000
 import { loadEnv, Modules, defineConfig } from '@medusajs/utils';
 import {
   ADMIN_CORS,
