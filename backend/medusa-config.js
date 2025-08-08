@@ -34,12 +34,19 @@ const medusaConfig = {
     redisUrl: REDIS_URL,
     workerMode: WORKER_MODE,
     http: {
+      port: port,
       adminCors: ADMIN_CORS,
       authCors: AUTH_CORS,
       storeCors: STORE_CORS,
       jwtSecret: JWT_SECRET,
       cookieSecret: COOKIE_SECRET
     },
+    build: {
+      rollupOptions: {
+        external: ["@medusajs/dashboard"]
+      }
+    }
+  },
     build: {
       rollupOptions: {
         external: ["@medusajs/dashboard"]
